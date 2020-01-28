@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ig-assignment-front/static/css/main.5c6731d5.chunk.css",
+    "main.js": "/ig-assignment-front/static/js/main.2579cc8f.chunk.js",
+    "main.js.map": "/ig-assignment-front/static/js/main.2579cc8f.chunk.js.map",
+    "runtime-main.js": "/ig-assignment-front/static/js/runtime-main.b92ffb9a.js",
+    "runtime-main.js.map": "/ig-assignment-front/static/js/runtime-main.b92ffb9a.js.map",
+    "static/js/2.37aa3911.chunk.js": "/ig-assignment-front/static/js/2.37aa3911.chunk.js",
+    "static/js/2.37aa3911.chunk.js.map": "/ig-assignment-front/static/js/2.37aa3911.chunk.js.map",
+    "index.html": "/ig-assignment-front/index.html",
+    "precache-manifest.f1da5abcc8264557d71b16b4afdae23f.js": "/ig-assignment-front/precache-manifest.f1da5abcc8264557d71b16b4afdae23f.js",
+    "service-worker.js": "/ig-assignment-front/service-worker.js",
+    "static/css/main.5c6731d5.chunk.css.map": "/ig-assignment-front/static/css/main.5c6731d5.chunk.css.map",
+    "static/js/2.37aa3911.chunk.js.LICENSE": "/ig-assignment-front/static/js/2.37aa3911.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b92ffb9a.js",
+    "static/js/2.37aa3911.chunk.js",
+    "static/css/main.5c6731d5.chunk.css",
+    "static/js/main.2579cc8f.chunk.js"
+  ]
+}
