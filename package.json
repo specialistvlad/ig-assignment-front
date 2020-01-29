@@ -1,6 +1,6 @@
 {
   "name": "snake-ml-experiment",
-  "homepage": "https://specialistvlad.github.io/snake-ml-experiment/",
+  "homepage": "https://specialistvlad.github.io/ig-assignment-front",
   "version": "0.1.0",
   "license": "MIT",
   "private": false,
@@ -14,9 +14,12 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "@types/react-router-dom": "^5.1.3",
     "@types/recharts": "^1.8.5",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-fetch-hook": "^1.7.1",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0",
     "recharts": "^2.0.0-beta.1",
     "typescript": "~3.7.2"

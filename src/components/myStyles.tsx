@@ -1,7 +1,9 @@
+import { makeStyles } from '@material-ui/core/styles';
+
 const drawerWidth = 240;
 
 // @ts-ignore
-export default theme => ({
+export const theme = theme => ({
   root: {
     display: 'flex',
   },
@@ -79,3 +81,6 @@ export default theme => ({
     height: 240,
   },
 });
+
+// @ts-ignore
+export const useStyles = makeStyles(theme);
