@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ig-assignment-front/precache-manifest.d9f5c8159c96150238ac340c7b28e746.js"
+  "/ig-assignment-front/precache-manifest.39f1443532bae683de076d1249d148a1.js"
 );
 
 self.addEventListener('message', (event) => {
