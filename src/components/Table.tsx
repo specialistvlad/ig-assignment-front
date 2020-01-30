@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import Link from '@material-ui/core/Link';
+import { useHistory } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -29,9 +29,10 @@ const useStyles = makeStyles(theme => ({
 
 export const TableComponent = () => {
   const classes = useStyles();
+  let history = useHistory();
   const { isLoading, data } = useFetch("https://jsonplaceholder.typicode.com/posts");
   const handleClick = (id: number) => {
-    console.log(id, 'aaa');
+    history.push(`/post/${id}`);
   }
   return (
     isLoading ? (

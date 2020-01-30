@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
 import Box from '@material-ui/core/Box';
@@ -19,8 +19,7 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import Menu from './Menu';
 import { useStyles } from './myStyles';
 import Copyright from './Copyright';
-import { Posts } from './Posts';
-import Post from './Post';
+import { Router } from './Router';
 
 export default () => {
   const classes = useStyles();
@@ -34,10 +33,11 @@ export default () => {
   };
 
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+  const getBasename = (path: string) => path.substr(0, path.lastIndexOf('/'));
 
   return (
     <div className={classes.root}>
-      <Router>
+      <BrowserRouter basename={getBasename(window.location.pathname)}>
         <CssBaseline />
         <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
           <Toolbar className={classes.toolbar}>
@@ -78,20 +78,13 @@ export default () => {
         <main className={classes.content}>
           <div className={classes.appBarSpacer} />
           <Container maxWidth="lg" className={classes.container}>
-            <Switch>
-              <Route exact path="/">
-                <Posts fixedHeightPaper={fixedHeightPaper}/>
-              </Route>
-              <Route path="/post/:id">
-                <Post />
-              </Route>
-            </Switch>
+            <Router fixedHeightPaper={fixedHeightPaper} />
             <Box pt={4}>
               <Copyright />
             </Box>
           </Container>
         </main>
-      </Router>
+      </BrowserRouter>
     </div>
   );
 }

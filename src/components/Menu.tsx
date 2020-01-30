@@ -17,12 +17,14 @@ import Divider from '@material-ui/core/Divider';
 export default () => (<>
   <List>
     <div>
-      <ListItem button>
-        <ListItemIcon>
-          <DashboardIcon />
-        </ListItemIcon>
-        <ListItemText primary="Dashboard" />
-      </ListItem>
+      <Link to="/Dashboard">
+        <ListItem button>
+          <ListItemIcon>
+            <DashboardIcon />
+          </ListItemIcon>
+          <ListItemText primary="Dashboard" />
+        </ListItem>
+      </Link>
       <Link to="/">
         <ListItem button>
           <ListItemIcon>
