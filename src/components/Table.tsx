@@ -1,12 +1,12 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { useHistory } from "react-router-dom";
-import { makeStyles } from '@material-ui/core/styles';
+import useSWR from 'swr';
+
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-import useFetch from "react-fetch-hook";
 
 import Title from './Title';
 
@@ -16,26 +16,15 @@ type TRow = {
   title: string
 };
 
-// @ts-ignore
-function preventDefault(event) {
-  event.preventDefault();
-}
-
-const useStyles = makeStyles(theme => ({
-  seeMore: {
-    marginTop: theme.spacing(3),
-  },
-}));
-
 export const TableComponent = () => {
-  const classes = useStyles();
   let history = useHistory();
-  const { isLoading, data } = useFetch("https://jsonplaceholder.typicode.com/posts");
+  const { data } = useSWR('https://jsonplaceholder.typicode.com/posts', (url: string) => fetch(url).then(_ => _.json()));
   const handleClick = (id: number) => {
     history.push(`/post/${id}`);
   }
+
   return (
-    isLoading ? (
+    !data ? (
       <div>Loading...</div>
     ) : (
       <React.Fragment>
@@ -58,11 +47,6 @@ export const TableComponent = () => {
           ))}
         </TableBody>
       </Table>
-      {/* <div className={classes.seeMore}>
-        <Link color="primary" href="#" onClick={preventDefault}>
-          See more orders
-        </Link>
-      </div> */}
     </React.Fragment>
     )
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
 import Box from '@material-ui/core/Box';
@@ -33,11 +33,11 @@ export default () => {
   };
 
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
-  const getBasename = (path: string) => path.substr(0, path.lastIndexOf('/'));
-
+  
   return (
     <div className={classes.root}>
-      <BrowserRouter basename={getBasename(window.location.pathname)}>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      {/* <BrowserRouter> */}
         <CssBaseline />
         <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
           <Toolbar className={classes.toolbar}>

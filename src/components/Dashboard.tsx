@@ -5,10 +5,8 @@ import Paper from '@material-ui/core/Paper';
 
 import Chart from './Chart';
 import Deposits from './Deposits';
-import { useStyles } from './myStyles';
 
 export const Dashboard: FC<{ fixedHeightPaper: string }> = ({ fixedHeightPaper }) => {
-  const classes = useStyles();
   return (
     <Grid container spacing={3}>
       {/* Chart */}

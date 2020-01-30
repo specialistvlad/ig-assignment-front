@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import { Posts } from './Posts';
 import { Post } from './Post';
 import { Dashboard } from './Dashboard';
@@ -15,5 +15,6 @@ export const Router: FC<{ fixedHeightPaper: string }> = ({ fixedHeightPaper }) =
     <Route path="/dashboard">
       <Dashboard fixedHeightPaper={fixedHeightPaper} />
     </Route>
+    <Redirect from='*' to='/' />
   </Switch>
 );
